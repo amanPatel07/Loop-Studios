@@ -1,0 +1,238 @@
+.hero-section {
+    background: url('/assets/images/desktop/image-hero.jpg') no-repeat;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+
+    &-content {
+        margin: 5rem 0;
+        padding: 2rem;
+        border: 1px solid $white;
+        width: 310px;
+    }
+
+    &-title {
+        font-size: 2.5rem;
+        font-weight: 100;
+        color: $white;
+
+        @include media-break-up(md) {
+            font-size: 6rem;
+        }
+    }
+
+    @include media-break-up(md) {
+        height: 800px;
+
+        &-content {
+            margin: 8rem 0;
+            width: 720px;
+        }
+
+        &-title {
+            font-size: 6rem;
+        }
+    }
+}
+
+.interactive-content {
+    padding: 3rem 0;
+
+    &-figure {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        padding: 3rem;
+        margin: 0;
+
+        @include media-break-up(md) {
+            padding: 2rem;
+            margin: 2rem;
+        }
+
+        @include media-break-up(lg) {
+            position: absolute;
+            margin: 3rem;
+            padding: 3rem;
+            width: 600px;
+            height: 410px;
+            bottom: -115px;
+            left: 43%;
+        }
+
+        @include media-break-up(xl) {
+            position: absolute;
+            margin: 3rem;
+            padding: 3rem;
+            width: 650px;
+            height: 410px;
+            bottom: -145px;
+            left: 43%;
+        }
+    }
+
+    &-title {
+        margin-bottom: 1.25rem;
+        font-size: 2rem;
+        font-weight: 100;
+        letter-spacing: 2px;
+
+        @include media-break-up(sm) {
+            font-size: 3rem;
+        }
+    }
+
+    &-caption {
+        font-weight: 500;
+        letter-spacing: 0.5;
+        color: $gray;
+    }
+}
+
+.creation-section {
+
+    .creation-heading {
+        display: flex;
+        justify-content: space-between;
+
+        .creation-title {
+            font-size: 3rem;
+            font-weight: 100;
+            letter-spacing: 2px;
+        }
+
+        .see-all-btn {
+            display: none;
+
+            @include media-break-up(md) {
+                display: block;
+                padding: 0 2.5rem;
+                border: 1px solid #000;
+                background-color: $white;
+                font-size: 1rem;
+                letter-spacing: 2px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .card-mobile-wrapper {
+
+        .see-all-btn {
+            padding: 1.5rem 2.5rem;
+            border: 1px solid #000;
+            background-color: $white;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        @include media-break-up(md) {
+            display: none;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 2rem;
+
+            &-figure {
+                width: 100%;
+                height: 100%;
+
+                &:hover {
+                    .card-caption {
+                        z-index: 3;
+                        color: $dark;
+                    }
+
+                    opacity: 0.4;
+                    transition: 0.2s all ease-in-out;
+                }
+            }
+
+            &-caption {
+                position: absolute;
+                font-size: 2rem;
+                color: white;
+                bottom: 70px;
+                left: 30px;
+                font-weight: 100;
+                letter-spacing: 1px;
+            }
+        }
+
+    }
+
+    .card-row {
+        display: none;
+        height: 300px;
+        margin: 40px -20px;
+
+        @include media-break-up(md) {
+            display: flex;
+            height: 300px;
+        }
+
+        @include media-break-up(lg) {
+            height: 400px;
+        }
+
+        @include media-break-up(xl) {
+            height: 500px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            margin: 0 20px;
+            position: relative;
+
+            @include media-break-up(lg) {
+                width: 25%;
+            }
+
+            &-figure {
+                width: 100%;
+                height: 100%;
+
+                &:hover {
+                    .card-caption {
+                        z-index: 3;
+                        color: $dark;
+                    }
+
+                    opacity: 0.4;
+                    transition: 0.2s all ease-in-out;
+                }
+            }
+
+            &-caption {
+                position: absolute;
+                font-size: 1.5rem;
+                color: white;
+                bottom: 45px;
+                left: 10px;
+                font-weight: 100;
+                letter-spacing: 1px;
+
+                @include media-break-up(lg) {
+                    left: 15px;
+                }
+
+                @include media-break-up(xl) {
+                    left: 50px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0 3rem 0;
+}
+
+.navbar {
+    display: none;
+
+    @include media-break-up(md) {
+        display: flex;
+    }
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        .nav-item {
+            .nav-link {
+                color: $white;
+            }
+        }
+    }
+}
+
+.hamburger-menu {
+    display: flex;
+    align-items: center;
+
+    @include media-break-up(md) {
+        display: none;
+    }
+}
+

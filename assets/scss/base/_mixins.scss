@@ -1,0 +1,101 @@
+// All the SCSS mixins goes here
+
+// Media query mixins
+@mixin media-break-up($width) {
+
+    @if $width == sm {
+        @media (min-width: 576px) { @content; }
+    }
+    @else if $width == md {
+        @media (min-width: 768px) { @content; }
+    }
+    @else if $width == lg {
+        @media (min-width: 992px) { @content; }
+    }
+    @else if $width == xl {
+        @media (min-width: 1200px) { @content; }
+    }
+    @else if $width == xxl { 
+        @media (min-width: 1400px) { @content; }
+    } 
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @mixin position ($position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+//     position: $position;
+//     top     : $top;
+//     right   : $right;
+//     bottom  : $bottom;
+//     left    : $left;
+// }
+
+// // Responsive media query mixin
+// @mixin for-size($size){
+
+//     @if $size == lg {
+//         @media (max-width: 992px) { @content; }
+//     }
+
+//     @else if $size == md {
+//         @media (max-width: 768px) { @content; }
+//     }
+
+//     @else if $size == sm {
+//         @media (max-width: 576px) { @content; }
+//     }
+
+//     @else if $size == x-sm {
+//         @media (max-width: 320px) { @content; }
+//     }
+// }
+
+// // Border mixin
+// // border radius mixin
+// @mixin border-radius($for: all, $value: 50%) {
+
+//     @if $for == all {
+//         border-radius: $value;
+//     }
+
+//     @else if $for == topleft {
+//         border-top-left-radius: $value;
+//     }
+
+//     @else if $for == topright {
+//         border-top-right-radius: $value;
+//     }
+
+//     @else if $for == bottomright {
+//         border-bottom-right-radius: $value;
+//     }
+
+//     @else if $for == bottomleft {
+//         border-bottom-left-radius: $value;
+//     }
+// }
